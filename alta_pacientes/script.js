@@ -4,12 +4,12 @@ document.getElementById('tieneObraSocial').addEventListener('change', function()
         campoObraSocial.classList.remove('oculto');
     } else {
         campoObraSocial.classList.add('oculto');
-        document.getElementById('obraSocial').value = ''; // Limpia el campo de texto si se oculta
+        document.getElementById('obraSocial').value = ''; 
     }
 });
 
 document.getElementById('formularioAltaPacientes').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita el envío del formulario
+    event.preventDefault(); 
 
     const nombre = document.getElementById('nombre').value;
     const apellido = document.getElementById('apellido').value;
@@ -23,24 +23,21 @@ document.getElementById('formularioAltaPacientes').addEventListener('submit', fu
     const mensajeExito = document.getElementById('mensajeExito');
     const mensajeError = document.getElementById('mensajeError');
 
-    // Validación del formulario
+    
     if (nombre && apellido && fechaNacimiento && direccion && telefono && correo && historialMedico && tieneObraSocial) {
         if (tieneObraSocial === 'si' && !obraSocial) {
             mensajeExito.textContent = '';
             mensajeError.textContent = 'Por favor, ingrese el nombre de la obra social.';
         } else {
-            // Muestra un mensaje de éxito
+        
             mensajeExito.textContent = 'Paciente dado de alta exitosamente.';
             mensajeError.textContent = '';
 
-            // Aquí podrías agregar una llamada a una API o backend para guardar los datos
-
-            // Limpiar el formulario
             document.getElementById('formularioAltaPacientes').reset();
-            campoObraSocial.classList.add('oculto'); // Oculta el campo de obra social nuevamente
+            campoObraSocial.classList.add('oculto');
         }
     } else {
-        // Muestra un mensaje de error
+        
         mensajeExito.textContent = '';
         mensajeError.textContent = 'Por favor, completa todos los campos.';
     }
