@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Inicio de Sesión</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="contenedor-login">
+        <h1 class="titulo-principal">Consultorio Dr Amado</h1>
+        <h2>Iniciar Sesión</h2>
+        <form id="formularioLogin">
+            <label for="usuario">Usuario</label>
+            <input type="text" id="usuario" name="usuario" required>
+            <label for="contraseña">Contraseña</label>
+            <input type="password" id="contraseña" name="contraseña" required>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+        <p id="mensajeError" class="mensaje-error"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

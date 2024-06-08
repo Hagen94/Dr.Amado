@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alta de Pacientes</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="contenedor-formulario">
+        <h2>Alta de Pacientes</h2>
+        <form id="formularioAltaPacientes">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" name="apellido" required>
+
+            <label for="fechaNacimiento">Fecha de Nacimiento</label>
+            <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+
+            <label for="direccion">Dirección</label>
+            <input type="text" id="direccion" name="direccion" required>
+
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" required>
+
+            <label for="correo">Correo Electrónico</label>
+            <input type="email" id="correo" name="correo" required>
+
+            <label for="tieneObraSocial">¿Tiene Obra Social?</label>
+            <select id="tieneObraSocial" name="tieneObraSocial" required>
+                <option value="">Seleccione una opción</option>
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+            </select>
+
+            <div id="campoObraSocial" class="oculto">
+                <label for="obraSocial">Nombre de la Obra Social</label>
+                <input type="text" id="obraSocial" name="obraSocial">
+            </div>
+
+            <label for="Observaciones">Observaciones</label>
+            <textarea id="Observaciones" name="Observaciones" rows="4" required></textarea>
+
+            <button type="submit">Dar de Alta</button>
+        </form>
+        <p id="mensajeExito" class="mensaje-exito"></p>
+        <p id="mensajeError" class="mensaje-error"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+

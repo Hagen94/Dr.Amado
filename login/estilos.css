@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+    margin: 10;
+    padding: 10;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+}
+
+.contenedor-login {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.titulo-principal {
+    font-size: 36px;
+    font-weight: bold;
+    color: #2874A6; /* Azul Oscuro */
+    margin-bottom: 20px;
+}
+
+.contenedor-login h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contenedor-login label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    text-align: left;
+}
+
+.contenedor-login input, 
+.contenedor-login button {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contenedor-login button {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contenedor-login button:hover {
+    background-color: #0056b3;
+}
+
+.mensaje-error {
+    color: red;
+    margin-top: 10px;
+}
