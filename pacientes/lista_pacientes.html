@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Pacientes</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="contenedor-lista">
+        <h1>Lista de Pacientes</h1>
+        <div class="busqueda">
+            <input type="text" id="buscar" placeholder="Buscar paciente...">
+        </div>
+        <ul>
+            <li>
+                <span>Juan Pérez</span>
+                <div class="botones">
+                    <button class="dar-de-baja" onclick="confirmarEliminar('Juan Pérez')">Dar de Baja</button>
+                    <a href="formulario_edicion.html" class="editar">Editar</a>
+                </div>
+            </li>
+            <li>
+                <span>María Gómez</span>
+                <div class="botones">
+                    <button class="dar-de-baja" onclick="confirmarEliminar('María Gómez')">Dar de Baja</button>
+                    <a href="formulario_edicion.html" class="editar">Editar</a>
+                </div>
+            </li>
+            <li>
+                <span>Carlos López</span>
+                <div class="botones">
+                    <button class="dar-de-baja" onclick="confirmarEliminar('Carlos López')">Dar de Baja</button>
+                    <a href="formulario_edicion.html" class="editar">Editar</a>
+                </div>
+            </li>
+            <li>
+                <span>Ana Martínez</span>
+                <div class="botones">
+                    <button class="dar-de-baja" onclick="confirmarEliminar('Ana Martínez')">Dar de Baja</button>
+                    <a href="formulario_edicion.html" class="editar">Editar</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+    <script>
+        function confirmarEliminar(nombrePaciente) {
+            const confirmacion = confirm(`¿Estás seguro de dar de baja a "${nombrePaciente}"?`);
+            if (confirmacion) {
+                // Aquí puedes agregar la lógica para eliminar al paciente
+                console.log(`Dar de baja a "${nombrePaciente}"`);
+            }
+        }
+
+        document.getElementById('buscar').addEventListener('input', function() {
+            const filtro = this.value.toUpperCase();
+            const lista = document.querySelectorAll('.contenedor-lista ul li');
+            lista.forEach(function(item) {
+                const texto = item.querySelector('span').textContent.toUpperCase();
+                if (texto.includes(filtro)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
