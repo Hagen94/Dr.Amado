@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alta de Turno</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="contenedor-formulario">
+        <h1>Alta de Turno</h1>
+        <form id="formularioEdicion">
+            <div class="campo">
+                <label for="nombre">Buscar:</label>
+                
+                <input type="text" id="buscar" placeholder="Buscar Paciente...">
+                <div>
+                <button type="submit">Alta Paciente</button>
+            </div>
+            </div>
+            <div class="campo">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="campo">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+            </div>
+            <div class="campo">
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" >
+            </div>
+            <div class="campo">
+                <label for="obrasocial">Obra Social:</label>
+                <input type="text" id="obrasocial" name="obrasocial">
+            </div>
+            <div class="campo">
+                <label for="asociadoNumero">Asociado Nº:</label>
+                <input type="asociadoNumero" id="asociadoNumero" name="asociadoNumero" required>
+            </div>
+            <!--div class="campo">
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+            </div-->
+            <!--div class="campo">
+                <label for="tieneObraSocial">¿Tiene Obra Social?</label>
+                <select id="tieneObraSocial" name="tieneObraSocial" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div-->
+            
+            <div>
+                <h1>
+                    
+                </h1>
+            </div>
+            <!--div class="campo" id="obraSocialCampo" style="display: none;">
+                <label for="obraSocial">Obra Social:</label>
+                <input type="text" id="obraSocial" name="obraSocial">
+            </div>
+            <div class="campo">
+                <label for="observaciones">Observaciones:</label>
+                <textarea id="observaciones" name="observaciones" rows="4"></textarea>
+            </div-->
+            <button type="submit">Reservar Turno</button>
+        </form>
+    </div>
+</body>
+</html>
